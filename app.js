@@ -6,7 +6,7 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const helmet = require('helmet');
+// const helmet = require('helmet');
 const compression = require('compression');
 
 const productRoutes = require('./api/routes/products');
@@ -17,7 +17,7 @@ mongoose.connect('mongodb+srv://aniketujgare:' + process.env.MONGO_ATLAS_PW + '@
    useNewUrlParser: true
 });
 
-app.use(helmet());
+// app.use(helmet());
 app.use(compression());
 app.use(morgan('dev'));
 app.use('/uploads',express.static('uploads'));
