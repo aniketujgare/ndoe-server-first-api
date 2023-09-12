@@ -6,13 +6,13 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const mongoose = require('helmet');
+const helmet = require('helmet');
 const compression = require('compression');
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 const userRoutes = require('./api/routes/user');
-
+//mongodb+srv://aniketujgare:<password>@cluster0.awjgbvl.mongodb.net/
 mongoose.connect('mongodb+srv://aniketujgare:' + process.env.MONGO_ATLAS_PW + '@cluster0.awjgbvl.mongodb.net/',{
    useNewUrlParser: true
 });
